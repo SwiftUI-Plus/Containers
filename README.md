@@ -22,3 +22,9 @@ The code is packaged as a framework. You can install manually (by copying the fi
 To install using Swift Package Manager, add this to the `dependencies` section of your `Package.swift` file:
 
 `.package(url: "https://github.com/SwiftUI-Plus/FittingGeometry.git", .upToNextMinor(from: "1.0.0"))`
+
+## Other Packages
+
+If you want easy access to this and more packages, add the following collection to your Xcode 13+ configuration:
+
+`https://benkau.com/packages.json`
