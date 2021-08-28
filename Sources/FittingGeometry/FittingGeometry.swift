@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// A geometry reader that automatically sizes its height to 'fit' its content.
 public struct FittingGeometryReader<Content>: View where Content: View {
 
     @State private var height: CGFloat = 10 // must be non-zero
@@ -20,21 +21,6 @@ public struct FittingGeometryReader<Content>: View where Content: View {
         .frame(height: height)
     }
 
-}
-
-struct FittingGeometryReader_Previews: PreviewProvider {
-    static var previews: some View {
-        FittingGeometryReader { geo in
-            HStack {
-                Spacer()
-                Text("The height is now \(geo.size.height)")
-                    .foregroundColor(.white)
-                Spacer()
-            }
-        }
-        .previewLayout(.sizeThatFits)
-        .background(Color.blue)
-    }
 }
 
 private struct SizePreferenceKey: PreferenceKey {
