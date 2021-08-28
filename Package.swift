@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "FittingGeometry",
+    name: "Containers",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
@@ -13,11 +13,11 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "FittingGeometry",
-            targets: ["FittingGeometry"]
+            name: "Containers",
+            targets: ["Containers"]
         ),
     ],
     targets: [
-        .target(name: "FittingGeometry")
+        .target(name: "Containers")
     ]
 )
