@@ -43,7 +43,7 @@ LayoutReader { layout in
 
 ## ScrollView
 
-A scrollview that provides support for multiple `contentMode`'s
+A scrollview that behaves more similarly to a `VStack` when its content size is small enough.
 
 ```swift
 ScrollView(contentMode: .fit) {
