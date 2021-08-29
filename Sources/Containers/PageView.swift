@@ -48,14 +48,10 @@ extension PageView where SelectionValue == Int {
 struct PageView_Previews: PreviewProvider {
     static var previews: some View {
         PageView(contentMode: .fill) {
-            Group {
-                Text("Test this")
-                Text("Test this again")
-            }
-            .font(.largeTitle)
-            .foregroundColor(.white)
+            Text("Page 1")
+            Text("Page 2")
+            Text("Page 3")
         }
-        .background(Color.blue)
         .previewLayout(.sizeThatFits)
     }
 }

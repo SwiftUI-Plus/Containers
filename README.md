@@ -9,6 +9,7 @@ Includes:
 - FittingGeometryReader (auto-sizes its height)
 - ScrollView (support various contentMode options)
 - LayoutReader (supports readable and other other guides)
+- PageView
 
 ## FittingGeometry
 
@@ -52,6 +53,23 @@ ScrollView(contentMode: .fit) {
     Text("I'm aligned to the bottom, until you scroll ;)")
 }
 ```
+
+## PageView
+
+A page view that behaves similarly to UIPageViewController but adds auto-sizing configuration.
+
+```swift
+// Passing `fit` for the contentMode forces the PageView to hug its content. To fill the available space, set this to `fill` (its default value)
+PageView(selection: $currentPage, contentMode: .fit) {
+    Group {
+        Text("Page 1")
+        Text("Page 2")
+        Text("Page 3")
+    }
+}
+```
+
+> Note: This view requires iOS 14+
 
 ## Installation
 
