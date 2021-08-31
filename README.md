@@ -71,6 +71,19 @@ PageView(selection: $currentPage, contentMode: .fit) {
 
 > Note: This view requires iOS 14+
 
+## UIKitView
+
+A SwiftUI view that accepts a single UIView instance to be presented in the hierarchy.
+
+```swift
+UIKitView {
+    let label = UILabel(frame: .zero)
+    label.text = "foo"
+    return label
+}
+```
+
+
 ## Installation
 
 The code is packaged as a framework. You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (__preferred__)
