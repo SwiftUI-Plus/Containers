@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// A scrollview that behaves more similarly to a `VStack` when its content size is small enough.
-public struct ScrollView<Content: View>: View {
+public struct ScrollableView<Content: View>: View {
 
     private let content: Content
     private let showsIndicators: Bool

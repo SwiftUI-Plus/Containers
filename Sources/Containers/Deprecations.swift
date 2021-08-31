@@ -15,3 +15,6 @@ extension LayoutProxy {
         }
     }
 }
+
+@available(swift, obsoleted: 1.0, renamed: "ScrollableView")
+public typealias ScrollView = ScrollableView
