@@ -13,6 +13,7 @@ public struct FittingGeometryReader<Content>: View where Content: View {
     public var body: some View {
         GeometryReader { geo in
             content(geo)
+                .fixedSize(horizontal: false, vertical: true)
                 .modifier(SizeModifier())
                 .onPreferenceChange(SizePreferenceKey.self) {
                     height = $0.height
