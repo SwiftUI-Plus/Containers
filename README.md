@@ -7,9 +7,10 @@ Useful SwiftUI container view's for additional convenience.
 Includes:
 
 - FittingGeometryReader (auto-sizes its height)
-- ScrollView (support various contentMode options)
+- ScrollableView (support various contentMode options)
 - LayoutReader (supports readable and other other guides)
-- PageView
+- PageView (TabView in paging style but supports auto-sizing)
+- UIKit View (Easily nest UIView's in SwiftUI, including auto-sizing)
 
 ## FittingGeometry
 
