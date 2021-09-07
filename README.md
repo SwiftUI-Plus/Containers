@@ -2,15 +2,17 @@
 
 # Containers
 
+> Also available as a part of my [SwiftUI+ Collection](https://benkau.com/packages.json) – just add it to Xcode 13+
+
 Useful SwiftUI container view's for additional convenience.
 
 Includes:
 
-- FittingGeometryReader (auto-sizes its height)
-- ScrollableView (support various contentMode options)
-- LayoutReader (supports readable and other other guides)
-- PageView (TabView in paging style but supports auto-sizing)
-- UIKit View (Easily nest UIView's in SwiftUI, including auto-sizing)
+-   FittingGeometryReader (auto-sizes its height)
+-   ScrollableView (support various contentMode options)
+-   LayoutReader (supports readable and other other guides)
+-   PageView (TabView in paging style but supports auto-sizing)
+-   UIKit View (Easily nest UIView's in SwiftUI, including auto-sizing)
 
 ## FittingGeometry
 
@@ -28,12 +30,12 @@ A container view that provides a layout proxy, allowing you to query various lay
 
 The most useful example is layout-relative to the `readableContentGuide`
 
-__Features__
+**Features**
 
-- Familiar API (similar to GeometryReader)
-- SafeArea, content (layoutMargins) and readable content guide layouts
-- Responds automatically to dynamic type changes
-- Respects interface orientation and other layout changes
+-   Familiar API (similar to GeometryReader)
+-   SafeArea, content (layoutMargins) and readable content guide layouts
+-   Responds automatically to dynamic type changes
+-   Respects interface orientation and other layout changes
 
 ```swift
 LayoutReader { layout in
@@ -84,10 +86,9 @@ UIKitView {
 }
 ```
 
-
 ## Installation
 
-The code is packaged as a framework. You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (__preferred__)
+The code is packaged as a framework. You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (**preferred**)
 
 To install using Swift Package Manager, add this to the `dependencies` section of your `Package.swift` file:
 
