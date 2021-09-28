@@ -1,5 +1,7 @@
 import SwiftUI
 
+#if os(iOS)
+
 /// A SwiftUI view that provides similar behaviour to a `UIPageViewController` that includes automatic sizing options.
 @available(iOS 14, *)
 public struct PageView<SelectionValue, Content>: View where SelectionValue: Hashable, Content: View {
@@ -73,3 +75,4 @@ private struct SizeModifier: ViewModifier {
     }
 }
 
+#endif

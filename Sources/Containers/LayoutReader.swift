@@ -1,5 +1,7 @@
 import SwiftUI
 
+#if os(iOS)
+
 /// A container view that provides a layout proxy, allowing you to query various layout properties usually only available via UIKit.
 /// The most useful example is layout-relative to the `readableContentGuide`
 public struct LayoutReader<Content: View>: View {
@@ -97,6 +99,42 @@ private extension LayoutReader.Representable {
     }
 
 }
+
+#else
+
+/// A container view that provides a layout proxy, allowing you to query various layout properties usually only available via UIKit.
+/// The most useful example is layout-relative to the `readableContentGuide`
+public struct LayoutReader<Content: View>: View {
+
+    @State private var proxy: LayoutProxy = .zero
+    private let content: (LayoutProxy) -> Content
+
+    /// A new layout reader
+    /// - Parameter content: The content for this view, the proxy provides layout-guide-relative frames for convenience
+    public init(@ViewBuilder _ content: @escaping (LayoutProxy) -> Content) {
+        self.content = content
+    }
+
+    public var body: some View {
+        GeometryReader { geo in
+            VStack(spacing: 0) {
+                content(
+                    LayoutProxy(
+                        safeArea: geo.frame(in: .global),
+                        content: geo.frame(in: .global),
+                        readable: geo.frame(in: .global),
+                        container: geo.frame(in: .global)
+                    )
+                )
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(width: proxy.size(in: .container).width)
+        }
+    }
+
+}
+
+#endif
 
 /// A proxy for access to the size of the container view relative to a layout
 public struct LayoutProxy: Equatable {

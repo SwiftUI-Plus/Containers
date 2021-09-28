@@ -1,5 +1,7 @@
 import SwiftUI
 
+#if os(iOS)
+
 /// A SwiftUI view that accepts a single UIView instance to be presented in the hierarchy.
 ///
 /// Note: Some views do not automatically size correctly and may require special handling. This may provide some convenience however in other cases.
@@ -75,3 +77,5 @@ public struct UIViewBuilder {
         components
     }
 }
+
+#endif
